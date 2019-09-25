@@ -1,0 +1,22 @@
+{
+  "name": "dionysus-bot",
+  "version": "1.0.0",
+  "description": "A bot that saves conversations on external drive",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "slackbot",
+    "bot",
+    "node",
+    "slack",
+    "hng6"
+  ],
+  "author": "dionysus",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "request": "^2.88.0"
+  }
+}
