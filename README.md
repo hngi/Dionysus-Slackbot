@@ -1,5 +1,6 @@
 # TESTING THE BOT
 
+- Request an invite to join the bot testing slack workspace form @hic
 - clone the repo and CD into slackbot
 - run `npm install` to install npm packages
 - run `npm test` on the terminal to see a return json conversation history
