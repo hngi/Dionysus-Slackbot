@@ -4,7 +4,7 @@
   "description": "A bot that saves conversations on external drive",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "slackbot",
@@ -20,5 +20,8 @@
     "express": "^4.17.1",
     "request": "^2.88.0",
     "slackbots": "^1.2.0"
+  },
+  "engines": {
+    "node": "8.x"
   }
 }

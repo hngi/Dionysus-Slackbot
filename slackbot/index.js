@@ -26,7 +26,7 @@ bot.on('start', ()=> {
   }
 
   bot.postMessageToChannel(
-    'dionysus',
+    'general',
     "Hello i am @dionysus!",
     params
   );
