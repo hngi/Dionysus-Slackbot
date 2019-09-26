@@ -1,3 +1,5 @@
-.env
-node_modules
-slack.json
+/node_modules
+/slack.json
+npm-debug.log
+.DS_Store
+/*.env
