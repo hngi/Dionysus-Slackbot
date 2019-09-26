@@ -3,9 +3,20 @@ require('dotenv').config();
 const SlackBot = require('slackbots');
 const express = require('express');
 const request = require('request');
+const path = require('path');
 const fs = require('fs');
 
 const app = express();
+app.use(express.urlencoded());
+app.use(express.static('public'));
+
+app.post('/sign-up', (req, res) => {
+  console.log(req.body)
+});
+
+app.post('/sign-in', (req, res) => {
+  console.log(req.body);
+})
 
 app.listen(process.env.PORT, ()=> {
   console.log('SERVER is ready!');
