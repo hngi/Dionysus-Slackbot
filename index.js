@@ -33,7 +33,7 @@ const bot = new SlackBot({
 
 bot.on('start', ()=> {
   const params = {
-    icon_emoji: ':smiley:'
+    icon_emoji: ':robot_face:'
   }
 
   bot.postMessageToChannel(
