@@ -28,7 +28,7 @@ app.post('/save-conversation', (req,res) => {
 
 const bot = new SlackBot({
   token: process.env.SLACK_BOT_AUTH,
-  name: 'jokebot'
+  name: 'dionysus'
 });
 
 bot.on('start', ()=> {
@@ -87,8 +87,9 @@ function getHelp(){
   }
 
   bot.postMessageToChannel(
-    'dionysus',
+    'random',
     "Type `/save-conversation` to save channel conversation",
     params
-  )
+  );
+
 }
