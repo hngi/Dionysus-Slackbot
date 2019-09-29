@@ -98,7 +98,7 @@ function getHelp(){
 
 function madQuestion(){
   const params = {
-    icon_emoji: ":question:"
+    icon_emoji: ":zany_face:"
   }
 
   bot.postMessageToChannel(
