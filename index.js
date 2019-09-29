@@ -73,7 +73,7 @@ function saveConversation(){
 
       bot.postMessageToChannel(
         'dionysus',
-        `Conversation has being saved :smiley:`,
+        `Conversation has been saved :smiley:`,
         params
       );
       console.log("Write Complete!");
