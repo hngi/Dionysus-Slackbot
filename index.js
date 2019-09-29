@@ -79,7 +79,7 @@ function saveConversation(){
 
       bot.postMessageToChannel(
         'random',
-        `Conversation has been successfully saved locally :smiley:`,
+        "Conversation has been successfully saved locally :smiley:",
         params
       );
       console.log("Write Complete!");
@@ -119,8 +119,7 @@ function aboutDionysus(){
 
   bot.postMessageToChannel(
     'random',
-    `I'm dionysus and i'm an intellectual property belonging to team Dionysus
-    I don't understand humans yet, would you love to help me learn more about the humans?`,
+    "I'm dionysus and i'm an intellectual property belonging to team Dionysus\nI don't understand humans yet, would you love to help me learn more about the humans? :slightly_smiling_face:",
     params
   );
 }
