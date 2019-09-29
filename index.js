@@ -119,9 +119,8 @@ function aboutDionysus(){
 
   bot.postMessageToChannel(
     'random',
-    `I'm dionysus and i'm an intellectual property belonging to team Dionysus\n
-    I don't understand humans yet, would you love to help me learn more about the humans?
-    `,
+    `I'm dionysus and i'm an intellectual property belonging to team Dionysus
+    I don't understand humans yet, would you love to help me learn more about the humans?`,
     params
   );
 }
@@ -133,7 +132,7 @@ function helloReply(){
 
   bot.postMessageToChannel(
     'random',
-    `Hi\n how can i help you :slightly_smiling_face:`,
+    "Hi, how can i help you :slightly_smiling_face:",
     params
   );
 }
