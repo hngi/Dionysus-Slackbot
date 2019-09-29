@@ -66,6 +66,16 @@ function handleMessage(message){
     aboutDionysus();
   }else if(message.includes(' hello')){
     helloReply();
+  }else if(message.includes(' yo!') || message.includes(' Yo!')){
+    const params = {
+      icon_emoji: ':smiley:'
+    }
+
+    bot.postMessageToChannel(
+      'random',
+      "Conversation has been successfully saved locally :smiley:",
+      params
+    );
   }
 }
 
