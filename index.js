@@ -133,7 +133,7 @@ function helloReply(){
 
   bot.postMessageToChannel(
     'random',
-    `Hi\n how can i help you :slightly_smiling_face`,
+    `Hi\n how can i help you :slightly_smiling_face:`,
     params
   );
 }
