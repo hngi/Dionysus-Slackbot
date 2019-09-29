@@ -28,7 +28,7 @@ app.post('/save-conversation', (req,res) => {
 
 const bot = new SlackBot({
   token: process.env.SLACK_BOT_AUTH,
-  name: 'dionysus'
+  name: 'dionysus-bot'
 });
 
 bot.on('start', ()=> {
@@ -37,7 +37,7 @@ bot.on('start', ()=> {
   }
 
   bot.postMessageToChannel(
-    'general',
+    'random',
     "Hello i am @dionysus!",
     params
   );
@@ -72,8 +72,8 @@ function saveConversation(){
       }
 
       bot.postMessageToChannel(
-        'dionysus',
-        `Conversation has being saved :smiley:`,
+        'random',
+        `Conversation has been successfully saved locally :smiley:`,
         params
       );
       console.log("Write Complete!");
