@@ -60,8 +60,12 @@ function handleMessage(message){
     saveConversation();
   }else if(message.includes(' help')){
     getHelp();
-  } else if(message.includes(' are you mad')){
+  }else if(message.includes(' are you mad')){
     madQuestion();
+  }else if(message.includes(' who are you')){
+    aboutDionysus();
+  }else if(message.includes(' hello')){
+    helloReply();
   }
 }
 
@@ -104,6 +108,32 @@ function madQuestion(){
   bot.postMessageToChannel(
     'random',
     "Enter my dm and you'd find out :smirk:",
+    params
+  );
+}
+
+function aboutDionysus(){
+  const params = {
+    icon_emoji: ":bigsmile:"
+  }
+
+  bot.postMessageToChannel(
+    'random',
+    `I'm dionysus and i'm an intellectual property belonging to team Dionysus\n
+    I don't understand humans yet, would you love to help me learn more about the humans?
+    `,
+    params
+  );
+}
+
+function helloReply(){
+  const params = {
+    icon_emoji: ":bigsmile:"
+  }
+
+  bot.postMessageToChannel(
+    'random',
+    `Hi\n how can i help you :slightly_smiling_face`,
     params
   );
 }
