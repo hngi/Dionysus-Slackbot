@@ -60,6 +60,8 @@ function handleMessage(message){
     saveConversation();
   }else if(message.includes(' help')){
     getHelp();
+  } else if(message.includes(' are you mad')){
+    madQuestion();
   }
 }
 
@@ -92,4 +94,16 @@ function getHelp(){
     params
   );
 
+}
+
+function madQuestion(){
+  const params = {
+    icon_emoji: ":question:"
+  }
+
+  bot.postMessageToChannel(
+    'random',
+    "Enter my dm and you'd find out :smirk:",
+    params
+  );
 }
