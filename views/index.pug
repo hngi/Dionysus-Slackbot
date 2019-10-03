@@ -9,7 +9,10 @@ html(lang="en")
     link(rel="stylesheet" href="css/style.css")
     title Welcome to Dionysus bot External Drive
   body
-    div#index-container.container
-      h1.head Hello World
-      img(src="/img/jokebot.png", alt="jokebot logo")
-      a(href='/sign-up'): button Register to begin
+    div#index-container
+      div.row
+        div.col-md
+          img(src="/img/bot.png", alt="jokebot logo")
+        div.col-md.welcome
+          h1 Welcome to Dionysus Land
+          a(href='/sign-up'): button.btn.btn-success Register to begin

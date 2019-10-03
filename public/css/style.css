@@ -30,13 +30,22 @@
     }
 
     #index-container{
-        background: blueviolet;
+        margin: 1em auto 0;
         text-align: center;
+        width: 90%;
+    }
+    .welcome{
+        margin: 15em 0 0;
+        text-align: left;
+    }
+    .welcome h1{
+        font-size: 50px;
+        font-weight: bold;
     }
     
     #index-container button{
         display: block;
-        margin: 0 auto;
+        margin: 0;
     }
     
     .signup-content,
