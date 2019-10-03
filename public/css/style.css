@@ -7,6 +7,11 @@
         width: 50px;
         height: 50px;
     }
+
+    .error{
+        color: #f00;
+        display: block;
+    }
     
     .container {
         width: 900px;
@@ -22,6 +27,16 @@
         -webkit-border-radius: 20px;
         -o-border-radius: 20px;
         -ms-border-radius: 20px;
+    }
+
+    #index-container{
+        background: blueviolet;
+        text-align: center;
+    }
+    
+    #index-container button{
+        display: block;
+        margin: 0 auto;
     }
     
     .signup-content,
