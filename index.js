@@ -4,14 +4,48 @@ const SlackBot = require('slackbots');
 const express = require('express');
 const request = require('request');
 const path = require('path');
+const {check, validationResult} = require('express-validator');
+// const session = require('express-session');
 const fs = require('fs');
 
 const app = express();
 app.use(express.urlencoded());
-app.use(express.static('public'));
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+// app.use(session({secret: 'a1zb2yc3z', resave: false, saveUninitialized: true}));
 
-app.post('/sign-up', (req, res) => {
-  console.log(req.body)
+app.get('/', (req, res) => {
+  res.render('index');
+})
+
+app.get('/sign-up', (req, res) => {
+  // req.session.error;
+  res.render('signup');
+})
+
+app.get('/sign-in', (req,res) => {
+  res.render('signin');
+})
+
+app.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+})
+
+app.post('/sign-up', [
+  check('name').isLength({min: 3}).withMessage("name is too short or empty"),
+  check('email').isEmail().withMessage('invalid email format'),
+  check('password').isLength({min: 6}).withMessage('password is too short')
+], (req, res) => {
+  const errors = validationResult(req);
+  let err = errors.array();
+
+  if(!errors.isEmpty()){
+    res.render('signup', {error: err[0].msg});
+  }else{
+    res.redirect('dashboard');
+  }
+  
 });
 
 app.post('/sign-in', (req, res) => {
