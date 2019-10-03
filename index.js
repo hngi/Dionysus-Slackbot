@@ -122,8 +122,13 @@ function saveConversation(){
       }
 
       bot.postMessageToChannel(
+<<<<<<< HEAD
         'random',
         "Conversation has been successfully saved locally :smiley:",
+=======
+        'dionysus',
+        `Conversation has been saved :smiley:`,
+>>>>>>> e06cebaba12917d5370de40a3a9919c2da6914e8
         params
       );
       console.log("Write Complete!");
@@ -143,6 +148,7 @@ function getHelp(){
   );
 
 }
+<<<<<<< HEAD
 
 function madQuestion(){
   const params = {
@@ -179,3 +185,5 @@ function helloReply(){
     params
   );
 }
+=======
+>>>>>>> e06cebaba12917d5370de40a3a9919c2da6914e8
