@@ -1,6 +1,18 @@
+    #body{
+        font-family: Ubuntu, Courier, monospace;
+        background: #eef1ee;
+    }
     .main {
         background: #f8f8f8;
         /* padding: 150px 0; */
+    }
+    .bot{
+        box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+        margin-top: 1.5em;
     }
 
     #dionysus-bot{
@@ -22,11 +34,11 @@
         -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
         -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
         -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
-        border-radius: 20px;
-        -moz-border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -o-border-radius: 20px;
-        -ms-border-radius: 20px;
+        /* border-radius: 20px; */
+        /* -moz-border-radius: 20px; */
+        /* -webkit-border-radius: 20px; */
+        /* -o-border-radius: 20px; */
+        /* -ms-border-radius: 20px; */
     }
 
     #index-container{
@@ -41,6 +53,9 @@
     .welcome h1{
         font-size: 50px;
         font-weight: bold;
+    }
+    .welcome a{
+        text-decoration: none;
     }
     
     #index-container button{
@@ -63,7 +78,7 @@
     }
     
     .signup {
-        margin-bottom: 150px;
+        margin-top: 50px;
     }
     
     .signup-content {

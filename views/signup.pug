@@ -8,14 +8,15 @@ html(lang="en")
     link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
     link(rel="stylesheet" href="css/style.css")
     title Slackbot SIgnIn
-  body
+  body#body
     main
       section.signup
         div.container
           div.signup-content
             div.signup-form
-              img(src="img/jokebot.png" alt="dionysus bot" id="dionysus-bot")
-              h2.form-title Sign up to use Dionysus Bot
+              a(href="/")
+                img(src="img/jokebot.png" alt="dionysus bot" id="dionysus-bot")
+              h2.form-title SIGN UP
               form(action="/sign-up" method="post")
                 span.error= error
                 div.form-display
@@ -29,8 +30,9 @@ html(lang="en")
                     span: i.fa.fa-key(aria-hidden="true")
                 div.form-display.form-button
                       input(type="submit" value="Sign Up")
-                a(href="/sign-in") Sign in    
+                      p Already have an account?
+                        a(href="/sign-in")  Sign in    
                 
             div.signup-image
                 figure: img(src="img/signup-image.jpg" alt="sing up image")
-                a(href="/").signup-image-link home
+                //- a(href="/").signup-image-link home

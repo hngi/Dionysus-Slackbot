@@ -49,6 +49,12 @@ app.post('/sign-up', [
 });
 
 app.post('/sign-in', (req, res) => {
+  const login = {name: "Opara Prosper", password: "hicopara"}
+  if(req.body.name === login.name && req.body.password === login.password){
+    res.redirect('dashboard');
+  }else{
+    res.render('signin', {error: 'incorrect username or password'})
+  }
   console.log(req.body);
 })
 
