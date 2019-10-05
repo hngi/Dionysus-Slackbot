@@ -22,6 +22,7 @@ html(lang="en")
                   img(src="img/jokebot.png" alt="dionysus bot" id="dionysus-bot")
                 h2.form-title SIGN IN
                 p.error= error
+                p.error= success
                 form(action="/sign-in" method="POST")
                   div.form-display
                     input(type="text" name="name" id="" placeholder="Your Name")

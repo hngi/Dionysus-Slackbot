@@ -45,7 +45,8 @@ app.post('/sign-up', [
   }else{
     req.session.name = req.body.name;
     req.session.password = req.body.password;
-    res.render('signin');
+    req.session.successfulSignup = "Enter your login details";
+    res.render('signin', {success: req.session.successfulSignup});
   }
   
 });
