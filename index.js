@@ -5,7 +5,7 @@ const express = require('express');
 const request = require('request');
 const path = require('path');
 const {check, validationResult} = require('express-validator');
-// const session = require('express-session');
+const session = require('express-session');
 const fs = require('fs');
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(express.urlencoded());
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(session({secret: 'a1zb2yc3z', resave: false, saveUninitialized: true}));
+app.use(session({secret: 'a1zb2yc3z', resave: false, saveUninitialized: true}));
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -43,14 +43,16 @@ app.post('/sign-up', [
   if(!errors.isEmpty()){
     res.render('signup', {error: err[0].msg});
   }else{
-    res.redirect('dashboard');
+    req.session.name = req.body.name;
+    req.session.password = req.body.password;
+    res.render('signin');
   }
   
 });
 
 app.post('/sign-in', (req, res) => {
   const login = {name: "Opara Prosper", password: "hicopara"}
-  if(req.body.name === login.name && req.body.password === login.password){
+  if(req.body.name === req.session.name && req.body.password === req.session.password){
     res.redirect('dashboard');
   }else{
     res.render('signin', {error: 'incorrect username or password'})
