@@ -45,16 +45,15 @@ app.post('/sign-up', [
   }else{
     req.session.name = req.body.name;
     req.session.password = req.body.password;
-    req.session.successfulSignup = "Enter your login details";
+    req.session.successfulSignup = "Enter your login details to continue";
     res.render('signin', {success: req.session.successfulSignup});
   }
   
 });
 
 app.post('/sign-in', (req, res) => {
-  const login = {name: "Opara Prosper", password: "hicopara"}
   if(req.body.name === req.session.name && req.body.password === req.session.password){
-    res.redirect('dashboard');
+    res.render('dashboard', {name: req.session.name});
   }else{
     res.render('signin', {error: 'incorrect username or password'})
   }
